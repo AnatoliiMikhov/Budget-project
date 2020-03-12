@@ -19,6 +19,6 @@ for (let i = 0; i < 2; i++) {
 
 appData.expenses.expensesMonthly = howMuch;
 
-let monthlyBudget = (money / 30);
+let monthlyBudget = (appData.budget / 30);
 
 alert('Ваши расходы составляют ' + monthlyBudget + ' валюты в день.');

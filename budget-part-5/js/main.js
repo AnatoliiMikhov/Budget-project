@@ -34,6 +34,13 @@ countBtn.disabled = true;
 
 startBtn.addEventListener("click", function () {
 	time = prompt("Введите дату в формате YYYY-MM-DD", "");
+	let checkDateInput = /^\d{4}-\d{2}-\d{2}$/g; // для проверки ввода даты в формате YYYY-MM-DD
+	while (!checkDateInput.test(time)) {
+		alert('Введите дату в формате YYYY-MM-DD');
+		time = prompt("Введите дату в формате YYYY-MM-DD", "");
+		if (time == "" || time == null) { break; }
+	}
+
 	money = +prompt("Ваш бюджет на месяц?", "");
 	while (isNaN(money) || money == "" || money == null) {
 		money = +prompt("Ваш бюджет на месяц?", "");
